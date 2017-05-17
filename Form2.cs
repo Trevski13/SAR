@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using LibVLC.NET;
+using System.Threading;
 
 namespace SAR
 {
@@ -23,6 +24,11 @@ namespace SAR
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
             this.BackColor = System.Drawing.Color.Black;
+            Thread.Sleep(1000);
+
+            TestProgram test = new TestProgram();
+            test.RunTest();
+            this.Close();
         }
     }
 }
